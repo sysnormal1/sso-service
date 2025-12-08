@@ -38,6 +38,9 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 **Alencar Velozo**  
 GitHub: [@aalencarvz1](https://github.com/aalencarvz1)
 
+**Organization**  
+GitHub: [@sysnormal1](https://github.com/sysnormal1)
+
 ---
 
 <!-- 🔗 The sso-starter is published on [Maven Central (Sonatype)](https://central.sonatype.com/artifact/com.sysnormal.services.security.sso/sso)-->
