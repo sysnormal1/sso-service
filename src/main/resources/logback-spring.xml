@@ -15,6 +15,9 @@
     <!-- Mostra todos os endpoints REST mapeados -->
     <logger name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" level="TRACE"/>
 
+    <logger name="com.sysnormal.starters.security.sso.spring.client_protector" level="DEBUG"/>
+    <logger name="com.sysnormal.libs" level="DEBUG"/>
+
     <logger name="org.springframework" level="WARN"/>
     <logger name="org.springframework.transaction" level="TRACE"/>
     <logger name="org.springframework.boot.web.embedded.tomcat" level="INFO"/>
@@ -23,5 +26,22 @@
     <logger name="org.hibernate.SQL" level="TRACE"/>
     <logger name="org.hibernate.orm.jdbc.bind" level="TRACE"/>
     <logger name="org.hibernate.type.descriptor.sql" level="TRACE"/>
-    <logger name="org.apache.catalina.core" level="INFO"/>
+
+    <!-- Tomcat logs -->
+    <logger name="org.springframework.web" level="DEBUG"/>
+    <logger name="org.springframework.boot.web" level="DEBUG"/>
+    <logger name="org.apache.catalina.startup" level="DEBUG"/>
+    <logger name="org.apache.catalina.util" level="DEBUG"/>
+
+    <!-- Mostra a inicialização do Tomcat (porta, protocolo, etc) -->
+
+    <logger name="org.springframework.boot.tomcat.TomcatWebServer" level="DEBUG"/>
+    <logger name="org.springframework.boot.web.embedded.tomcat.TomcatWebServer" level="DEBUG"/>
+
+    <!-- Mostra os ProtocolHandlers (porta e protocolo real usado) -->
+    <logger name="org.apache.coyote.AbstractProtocol" level="DEBUG"/>
+
+    <!-- Mostra detalhes de inicialização dos conectores -->
+    <logger name="org.apache.catalina.core.StandardService" level="DEBUG"/>
+    <logger name="org.apache.catalina.core.StandardEngine" level="DEBUG"/>
 </configuration>
