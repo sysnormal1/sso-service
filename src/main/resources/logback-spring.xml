@@ -10,22 +10,26 @@
         <appender-ref ref="FILE" />
     </root>
     <logger name="com.sysnormal.services.security.sso" level="DEBUG"/>
-    <logger name="com.sysnormal.starters.security.sso.spring.sso_starter" level="DEBUG"/>
+    <logger name="com.sysnormal.libs.utils" level="DEBUG"/>
+    <logger name="com.sysnormal.libs.db.entities.base_entities" level="DEBUG"/>
+    <logger name="com.sysnormal.libs.db.repositories.base_repositories" level="DEBUG"/>
+    <logger name="com.sysnormal.starters.security.sso.sso_starter" level="DEBUG"/>
 
     <!-- Mostra todos os endpoints REST mapeados -->
     <logger name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" level="TRACE"/>
 
     <logger name="com.sysnormal.starters.security.sso.spring.client_protector" level="DEBUG"/>
-    <logger name="com.sysnormal.libs" level="DEBUG"/>
 
     <logger name="org.springframework" level="WARN"/>
     <logger name="org.springframework.transaction" level="TRACE"/>
     <logger name="org.springframework.boot.web.embedded.tomcat" level="INFO"/>
     <logger name="org.springframework.boot.web" level="INFO"/>
+
     <logger name="org.hibernate" level="WARN"/>
     <logger name="org.hibernate.SQL" level="TRACE"/>
     <logger name="org.hibernate.orm.jdbc.bind" level="TRACE"/>
     <logger name="org.hibernate.type.descriptor.sql" level="TRACE"/>
+    <logger name="org.flywaydb" level="TRACE"/>
 
     <!-- Tomcat logs -->
     <logger name="org.springframework.web" level="DEBUG"/>

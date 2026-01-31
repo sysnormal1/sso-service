@@ -1,62 +1,74 @@
 spring:
   application:
     name: sso
-sso:
   server:
-    port: ${SSO_SERVER_PORT:3000}
-    local-port: ${SSO_SERVER_LOCAL_PORT:3001}
+    port: ${SERVER_PORT:3000}
+    local-port: ${SERVER_LOCAL_PORT:3001}
     ssl:
-      enabled: ${SSO_SERVER_SSL_ENABLED:false}
-      key-store: ${SSO_SERVER_SSL_KEYSTORE_PATH:my_ssl_keystore_path}
-      key-store-password: ${SSO_SERVER_SSL_KEYSTORE_PASSWORD:my_ssl_keystore_password}
-      key-store-type: ${SSO_SERVER_SSL_KEYSTORE_TYPE:PKCS12}
-  database:
-    datasource:
-      jdbc-url: ${SSO_DB_JDBC_URL:jdbc:mysql://127.0.0.1:3306/my_sso}
-      username: ${SSO_DB_USER:root}
-      password: ${SSO_DB_PASSWORD:masterkey}
-      driver-class-name: ${SSO_DB_DRIVER_CLASS_NAME:com.mysql.cj.jdbc.Driver}
-    flyway:
-      enabled: false
-      baseline-on-migrate: true
-      locations: ${SSO_FLYWAY_LOCATIONS:classpath=db/migration}
-    jpa:
+      enabled: ${SERVER_SSL_ENABLED:false}
+      key-store: ${SERVER_SSL_KEYSTORE_PATH:my_ssl_keystore_path}
+      key-store-password: ${SERVER_SSL_KEYSTORE_PASSWORD:my_ssl_keystore_password}
+      key-store-type: ${SERVER_SSL_KEYSTORE_TYPE:PKCS12}
+  datasource:
+    sso: #must be this name for serialization by starter on properties file
+      id: ${DB_DEFAULT_CONNECTION_ID:1}
+      name: ${DB_DEFAULT_CONNECTION_NAME:server}
+      jdbc-url: ${DB_JDBC_URL:jdbc:mysql://127.0.0.1:3306/my_sso}
+      username: ${DB_USER:root}
+      password: ${DB_PASSWORD:masterkey}
+      driver-class-name: ${DB_DRIVER_CLASS_NAME:com.mysql.cj.jdbc.Driver}
+      root-user-name: ${DB_SYSNORMAL_ROOT_USER_NAME:root}                    #for create database and users if needed
+      root-password: ${DB_SYSNORMAL_ROOT_USER_PASSWORD:masterkey}
+      dml-user-name: ${DB_SYSNORMAL_DML_USER_NAME:null}                           #dml user to crud, for use in applications which need dml (crud) operations
+      dml-user-password: ${DB_SYSNORMAL_DML_USER_PASSWORD:null}
+      dql-user-name: ${DB_SYSNORMAL_DQL_USER_NAME:null}                      #dql user to query only, for use in applications which need dql (select) only operations
+      dql-user-password: ${DB_SYSNORMAL_DQL_USER_PASSWORD:null}
+      long-text-max-length: ${DB_LONG_TEXT_MAX_LENGTH:4294967295}
+  flyway:
+    enabled: ${FLYWAY_ENABLED:true}
+    #baseline-on-migrate: true
+    #locations: ${FLYWAY_LOCATIONS:classpath=db/migration}
+  jpa:
+    #hibernate:
+      #ddl-auto: ${JPA_DDL_AUTO:update}
+    properties:
       hibernate:
-        ddl-auto: ${SSO_JPA_DDL_AUTO:update}
-      properties:
-        hibernate:
-          dialect:
-            org:
-              hibernate:
-                dialect: ${SSO_JPA_DIALECT:MySQL8Dialect}
+        format_sql: true
+        dialect:
+          org:
+            hibernate:
+              dialect: ${JPA_DIALECT:MySQL8Dialect}
   jwt:
-    secret-key: ${SSO_JWT_SECRET_KEY:f324a2deac2fe6c1b8585fd3bae1df33956d6a918cfeffcbf772cb2ec4001bf8}
-    default-token-expiration: ${SSO_JWT_DEFAULT_TOKEN_EXPIRATION:60000}
-    default-refresh-token-expiration: ${SSO_JWT_DEFAULT_REFRESH_TOKEN_EXPIRATION:300000}
+    secret-key: ${JWT_SECRET_KEY:f324a2deac2fe6c1b8585fd3bae1df33956d6a918cfeffcbf772cb2ec4001bf8}
+    default-token-expiration: ${JWT_DEFAULT_TOKEN_EXPIRATION:60000}
+    default-refresh-token-expiration: ${JWT_DEFAULT_REFRESH_TOKEN_EXPIRATION:300000}
   security:
     password-rules:
-      min-length: ${SSO_SECURITY_DEFAULT_MIN_PASSWORD_LENGTH:8}
+      min-length: ${SECURITY_DEFAULT_MIN_PASSWORD_LENGTH:8}
+    system-user:
+      email: ${SYSTEM_USER_EMAIL:system@system}
+      password: ${SYSTEM_USER_PASSWORD:system}
   auth:
     google:
-      enabled: ${SSO_AUTH_GOOGLE_ENABLED:false}
-      client-id: ${SSO_AUTH_GOOGLE_CLIENT_ID}
-      client-secret: ${SSO_AUTH_GOOGLE_CLIENT_SECRET}
+      enabled: ${AUTH_GOOGLE_ENABLED:false}
+      client-id: ${AUTH_GOOGLE_CLIENT_ID}
+      client-secret: ${AUTH_GOOGLE_CLIENT_SECRET}
     github:
-      enabled: ${SSO_AUTH_GITHUB_ENABLED:false}
-      client-id: ${SSO_AUTH_GITHUB_CLIENT_ID}
-      client-secret: ${SSO_AUTH_GITHUB_CLIENT_SECRET}
+      enabled: ${AUTH_GITHUB_ENABLED:false}
+      client-id: ${AUTH_GITHUB_CLIENT_ID}
+      client-secret: ${AUTH_GITHUB_CLIENT_SECRET}
   mail:
-    host: ${SSO_MAIL_HOST:smtp.google.com}
-    port: ${SSO_MAIL_PORT:445}
-    username: ${SSO_MAIL_USERNAME:my_mail@google.com}
-    password: ${SSO_MAIL_PASSWORD:my_password}
-    protocol: ${SSO_MAIL_PROTOCOL:https}
+    host: ${MAIL_HOST:smtp.google.com}
+    port: ${MAIL_PORT:445}
+    username: ${MAIL_USERNAME:my_mail@google.com}
+    password: ${MAIL_PASSWORD:my_password}
+    protocol: ${MAIL_PROTOCOL:https}
     properties:
       mail:
         smtp:
-          auth: ${SSO_MAIL_SMTP_AUTH:true}
+          auth: ${MAIL_SMTP_AUTH:true}
           ssl:
-            enable: ${SSO_MAIL_SMTP_SSL_ENABLE:true}
+            enable: ${MAIL_SMTP_SSL_ENABLE:true}
             trust: "*"
           starttls:
-            enable: ${SSO_MAIL_SMTP_STARTTLS_ENABLE:false}
+            enable: ${MAIL_SMTP_STARTTLS_ENABLE:false}
