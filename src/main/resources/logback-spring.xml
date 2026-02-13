@@ -15,6 +15,10 @@
     <logger name="com.sysnormal.libs.db.repositories.base_repositories" level="DEBUG"/>
     <logger name="com.sysnormal.starters.security.sso.sso_starter" level="DEBUG"/>
 
+    <!--LOGS OF SECURITY FILTERS-->
+    <logger name="org.springframework.security" level="DEBUG"/>
+    <logger name="org.springframework.security.web.FilterChainProxy" level="DEBUG"/>
+
     <!-- Mostra todos os endpoints REST mapeados -->
     <logger name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" level="TRACE"/>
 
