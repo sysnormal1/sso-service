@@ -1,11 +1,11 @@
-package com.sysnormal.services.security.sso;
+package com.sysnormal.security.auth.sso.sso_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SsoApplication {
+public class SsoServiceApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(SsoApplication.class, args);
+		SpringApplication.run(SsoServiceApplication.class, args);
 	}
 }

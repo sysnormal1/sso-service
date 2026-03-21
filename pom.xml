@@ -8,16 +8,16 @@
 		<version>4.0.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.sysnormal.services.security</groupId>
-	<artifactId>sso</artifactId>
+	<groupId>com.sysnormal.security.auth.sso</groupId>
+	<artifactId>sso-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sso</name>
+	<name>sso-service</name>
     <description>Spring Boot Sso service</description>
     <url>https://github.com/sysnormal1/sso</url>
 
     <organization>
         <name>SYSNORMAL</name>
-        <url>https://github.com/sysnormal1/sso</url>
+        <url>https://github.com/sysnormal1/sso-service</url>
     </organization>
 
     <licenses>
@@ -28,9 +28,9 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/sysnormal1/sso</url>
-        <connection>scm:git:git://github.com/sysnormal1/sso.git</connection>
-        <developerConnection>scm:git:ssh://github.com/sysnormal1/sso.git</developerConnection>
+        <url>https://github.com/sysnormal1/sso-service</url>
+        <connection>scm:git:git://github.com/sysnormal1/sso-service.git</connection>
+        <developerConnection>scm:git:ssh://github.com/sysnormal1/sso-service.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 

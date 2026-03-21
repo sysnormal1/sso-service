@@ -9,7 +9,7 @@
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />
     </root>
-    <logger name="com.sysnormal.services.security.sso" level="DEBUG"/>
+    <logger name="com.sysnormal.security.auth.sso.sso_service" level="DEBUG"/>
     <logger name="com.sysnormal.libs.utils" level="DEBUG"/>
     <logger name="com.sysnormal.libs.utils.database" level="DEBUG"/>
     <logger name="com.sysnormal.libs.utils.database.DatabaseUtils" level="DEBUG"/>
