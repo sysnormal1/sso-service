@@ -39,10 +39,13 @@ spring:
             hibernate:
               dialect: ${JPA_DIALECT:MySQL8Dialect}
   jwt:
-    secret-key: ${JWT_SECRET_KEY:f324a2deac2fe6c1b8585fd3bae1df33956d6a918cfeffcbf772cb2ec4001bf8}
+    #secret-key: ${JWT_SECRET_KEY:f324a2deac2fe6c1b8585fd3bae1df33956d6a918cfeffcbf772cb2ec4001bf8} deprecated
+    private-key-path: ${JWT_PRIVATE_KEY_PATH}
+    public-key-path: ${JWT_PUBLIC_KEY_PATH}
     default-token-expiration: ${JWT_DEFAULT_TOKEN_EXPIRATION:60000}
     default-refresh-token-expiration: ${JWT_DEFAULT_REFRESH_TOKEN_EXPIRATION:300000}
   security:
+    public-endpoints: ${SECURITY_PUBLIC_ENDPOINTS:""}
     password-rules:
       min-length: ${SECURITY_DEFAULT_MIN_PASSWORD_LENGTH:8}
     system-user:
