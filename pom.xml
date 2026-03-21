@@ -13,11 +13,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sso</name>
     <description>Spring Boot Sso service</description>
-    <url>https://github.com/sysnormal1/java-spring-sso</url>
+    <url>https://github.com/sysnormal1/sso</url>
 
     <organization>
         <name>SYSNORMAL</name>
-        <url>https://github.com/sysnormal1/java-spring-sso</url>
+        <url>https://github.com/sysnormal1/sso</url>
     </organization>
 
     <licenses>
@@ -28,9 +28,9 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/sysnormal1/java-spring-sso</url>
-        <connection>scm:git:git://github.com/sysnormal1/java-spring-sso.git</connection>
-        <developerConnection>scm:git:ssh://github.com/sysnormal1/java-spring-sso.git</developerConnection>
+        <url>https://github.com/sysnormal1/sso</url>
+        <connection>scm:git:git://github.com/sysnormal1/sso.git</connection>
+        <developerConnection>scm:git:ssh://github.com/sysnormal1/sso.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 

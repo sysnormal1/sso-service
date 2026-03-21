@@ -1,6 +1,6 @@
 # SSO
 
-**SSO Starter** basic implementation of use the library [sso-starter](https://github.com/sysnormal1/java-spring-sso.git). 
+**SSO Starter** basic implementation of use the library [sso-starter](https://github.com/sysnormal1/sysnormal-spring-boot-starter-sso.git). 
 
 ---
 ## ⚙️ Configuration
@@ -14,7 +14,7 @@
 To get started locally:
 
 ```bash
-git clone https://github.com/sysnormal1/java-spring-sso.git
+git clone https://github.com/sysnormal1/sso.git
 cd java-spring-sso
 mvn clean package
 ```
