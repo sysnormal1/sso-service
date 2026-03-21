@@ -35,4 +35,4 @@ build/
 .env
 logs/
 .m2/
-.keys/
+keys/
