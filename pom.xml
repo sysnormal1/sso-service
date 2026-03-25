@@ -5,12 +5,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.0.3</version>
+		<version>4.0.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sysnormal.security.auth.sso</groupId>
 	<artifactId>sso-service</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>sso-service</name>
     <description>Spring Boot Sso service</description>
     <url>https://github.com/sysnormal1/sso</url>
@@ -58,15 +58,9 @@
         </dependency>
 
         <dependency>
-            <groupId>one.stayfocused.spring</groupId>
-            <artifactId>dotenv-spring-boot</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        <dependency>
             <groupId>io.github.sysnormal1.security.auth.sso.starter</groupId>
             <artifactId>sysnormal-spring-boot-starter-sso</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.2-SNAPSHOT</version>
         </dependency>
 
 	</dependencies>

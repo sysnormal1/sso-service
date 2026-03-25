@@ -36,3 +36,4 @@ build/
 logs/
 .m2/
 keys/
+/config/

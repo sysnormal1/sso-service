@@ -10,15 +10,10 @@
         <appender-ref ref="FILE" />
     </root>
     <logger name="com.sysnormal.security.auth.sso.sso_service" level="DEBUG"/>
-    <logger name="com.sysnormal.libs.utils" level="DEBUG"/>
-    <logger name="com.sysnormal.libs.utils.database" level="DEBUG"/>
-    <logger name="com.sysnormal.libs.utils.database.DatabaseUtils" level="DEBUG"/>
-
-    <logger name="com.sysnormal.libs.db.entities.base_entities" level="DEBUG"/>
-    <logger name="com.sysnormal.libs.db.repositories.base_repositories" level="DEBUG"/>
+    <logger name="com.sysnormal.commons" level="DEBUG"/>
+    <logger name="com.sysnormal.data" level="DEBUG"/>
     <logger name="com.sysnormal.security.auth.sso.starter.sysnormal_spring_boot_starter_sso_client_protector" level="DEBUG"/>
     <logger name="com.sysnormal.security.auth.sso.starter.sysnormal_spring_boot_starter_sso" level="DEBUG"/>
-    <logger name="com.sysnormal.starters.security.sso.spring.client_protector" level="DEBUG"/>
 
     <!--LOGS OF SECURITY FILTERS-->
     <logger name="org.springframework.security" level="DEBUG"/>
@@ -27,7 +22,6 @@
     <!-- Mostra todos os endpoints REST mapeados -->
     <logger name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" level="TRACE"/>
 
-    <logger name="com.sysnormal.starters.security.sso.spring.client_protector" level="DEBUG"/>
 
     <logger name="org.springframework" level="WARN"/>
     <logger name="org.springframework.transaction" level="TRACE"/>
