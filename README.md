@@ -5,7 +5,7 @@
 ---
 ## ⚙️ Configuration
 
-> ⚠️ You must manually create the database schema before the first execution.
+> ⚠️ if correct configured on application.yml, the database is auto-create on startup.
 ---
 
 
@@ -14,8 +14,8 @@
 To get started locally:
 
 ```bash
-git clone https://github.com/sysnormal1/sso.git
-cd java-spring-sso
+git clone https://github.com/sysnormal1/sso-service.git
+cd sso-service
 mvn clean package
 ```
 
@@ -42,6 +42,3 @@ GitHub: [@aalencarvz1](https://github.com/aalencarvz1)
 GitHub: [@sysnormal1](https://github.com/sysnormal1)
 
 ---
-
-<!-- 🔗 The sso-starter is published on [Maven Central (Sonatype)](https://central.sonatype.com/artifact/com.sysnormal.services.security.sso/sso)-->
-
