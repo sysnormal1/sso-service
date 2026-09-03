@@ -14,6 +14,8 @@
     <logger name="com.sysnormal.data" level="DEBUG"/>
     <logger name="com.sysnormal.security.auth.sso.starter.sysnormal_spring_boot_starter_sso_client_protector" level="DEBUG"/>
     <logger name="com.sysnormal.security.auth.sso.starter.sysnormal_spring_boot_starter_sso" level="DEBUG"/>
+    <logger name="com.sysnormal.security.core.security_core" level="DEBUG"/>
+
 
     <!--LOGS OF SECURITY FILTERS-->
     <logger name="org.springframework.security" level="DEBUG"/>
