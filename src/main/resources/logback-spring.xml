@@ -10,6 +10,9 @@
         <appender-ref ref="FILE" />
     </root>
 
+    <!-- monitoramento central: envia os ERROR ao monitor-service (sysnormal.monitoring.errors.* no config/) -->
+    <include resource="sysnormal/monitoring/logback-appender.xml"/>
+
     <!--
         Produção: ative com spring.profiles.active=prod (argumento no WinSW).
         Só INFO do código Sysnormal e WARN do resto; nada de SQL nem valores de parâmetro no arquivo.

@@ -63,6 +63,13 @@
             <version>0.1.1-SNAPSHOT</version>
         </dependency>
 
+        <!-- monitoramento central: actuator protegido e envio dos erros ao monitor-service -->
+        <dependency>
+            <groupId>io.github.sysnormal1.monitoring.starter</groupId>
+            <artifactId>sysnormal-spring-boot-starter-monitoring-client</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
 	</dependencies>
 
 	<build>
@@ -91,6 +98,14 @@
                         </exclude>
                     </excludes>
                 </configuration>
+                <executions>
+                    <!-- versão e data do build no /actuator/info, para o painel do monitor -->
+                    <execution>
+                        <goals>
+                            <goal>build-info</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 		</plugins>
 	</build>

@@ -1,3 +1,9 @@
 spring:
   application:
     name: sso-service
+
+# monitoramento central: o actuator acha o arquivo de log (o LOG_FILE do logback não é visto por ele)
+management:
+  endpoint:
+    logfile:
+      external-file: logs/sso-service.log
